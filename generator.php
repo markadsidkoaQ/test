@@ -15,14 +15,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $imie = sanitize_input($_POST['imie']);
-    $nazwisko = sanitize_input($_POST['nazwisko']);
-    $birthdate = sanitize_input($_POST['birthdate']);
-    $pesel = sanitize_input($_POST['pesel']);
+    $imie = sanitize_input($_POST['Marek']);
+    $nazwisko = sanitize_input($_POST['Nowacki']);
+    $birthdate = sanitize_input($_POST['19.03.1993']);
+    $pesel = sanitize_input($_POST['12345']);
     $link_zdjecia = ($_POST['link_zdjecia']);
     $plec = sanitize_input($_POST['plec']);
   
-    $username = $_SESSION['username'];
+    $username = $_SESSION['marek'];
   
     $dowodnowy_template = file_get_contents('templates/dowodnowy.html');
     $dashboard_template = file_get_contents('templates/dashboard.html');
